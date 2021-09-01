@@ -27,7 +27,7 @@ li {
   line-height: 20px;
 }
 
-#description {
+#description::first-letter {
   text-transform: capitalize;
 }
 
