@@ -1,0 +1,64 @@
+.weatherapp {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #202124;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  color: #70757a;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+#description {
+  text-transform: capitalize;
+}
+
+a {
+  color: rgb(216, 180, 21);
+  text-decoration-line: none;
+}
+
+.float-left {
+  float: left;
+}
+
+.overview {
+  margin-bottom: 20px;
+}
+
+.weather-temp img {
+  margin-right: 10px;
+}
+
+strong {
+  font-weight: 400;
+}
+.weather-temp strong {
+  color: #70757a;
+  font-size: 50px;
+  line-height: 1;
+}
+
+.weather-temp .units {
+  position: relative;
+  font-size: 16px;
+  top: -25px;
+}
