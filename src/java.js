@@ -28,7 +28,7 @@ function displayTemp(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  console.log(response.data.wind.speed);
+  console.log(response.data);
   let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   let iconElement = document.querySelector("#icon");
@@ -36,8 +36,22 @@ function displayTemp(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function search(city) {
 let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
-let city = "London"
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-
 axios.get(apiUrl).then(displayTemp);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+
+search("Toronto");
+
+
+let form = document.querySelector("#search-form");
+
+form.addEventListener("submit", handleSubmit);
