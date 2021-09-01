@@ -31,9 +31,13 @@ function displayTemp(response) {
   console.log(response.data.wind.speed);
   let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Toronto&units=metric&appid=${apiKey}`;
+let city = "London"
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
 axios.get(apiUrl).then(displayTemp);
