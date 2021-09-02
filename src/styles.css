@@ -62,3 +62,8 @@ strong {
   font-size: 16px;
   top: -25px;
 }
+
+.weather-temp .active {
+  color: #70757a;
+  cursor: default;
+}

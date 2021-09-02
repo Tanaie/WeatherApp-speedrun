@@ -20,10 +20,22 @@
         <form id="search-form" class="mb-3">
           <div class="row">
             <div class="col-9">
-          <input type="search" placeholder="Type a city..." class="form-control" id="city-input" autocomplete="off"/></div>
-        <div class="col-3">
-          <input type="submit" value="search" class="btn btn-primary w-100"/></div></div>
-        
+              <input
+                type="search"
+                placeholder="Type a city..."
+                class="form-control"
+                id="city-input"
+                autocomplete="off"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="search"
+                class="btn btn-primary w-100"
+              />
+            </div>
+          </div>
         </form>
         <div class="overview">
           <h1 id="city"></h1>
@@ -40,11 +52,13 @@
                 alt="cloudy"
                 id="icon"
                 class="float-left"
-                
               />
               <div class="float-left">
                 <strong id="tempy"></strong>
-                <small class="units">°C | °F</small>
+                <small class="units"
+                  ><a href="#" id="celsius-link" class="active">°C</a> |
+                  <a href="#" id="fahren-link">°F</a></small
+                >
               </div>
             </div>
           </div>
