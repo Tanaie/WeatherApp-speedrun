@@ -65,6 +65,9 @@ function displayFahrenTemp(event) {
   fahrenLink.classList.add("active");
   let tempElement = document.querySelector("#tempy");
   tempElement.innerHTML = fahrenheitTemp;
+
+  tempElement.style.transition = "all 300ms ease-in-out";
+  tempElement.style.color = "rgb(216, 180, 21)";
 }
 
 function displaycelsiusTemp(event) {
@@ -73,6 +76,8 @@ function displaycelsiusTemp(event) {
   celsiusLink.classList.add("active");
   fahrenLink.classList.remove("active");
   tempElement.innerHTML = celsiusTemp;
+  tempElement.style.transition = "all 300ms ease-in-out";
+  tempElement.style.color = "#70757a";
 }
 
 let celsiusTemp = null;
